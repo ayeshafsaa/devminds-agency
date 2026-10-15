@@ -4,7 +4,7 @@ A concept website for **DevMinds.ai**, a fictional digital and AI agency offerin
 
 > DevMinds.ai is a made-up company. All projects, team members, statistics and testimonials on the site are placeholders.
 
-**Live site:** add your Netlify link here
+**Live site:** https://devminds-agency-git-main-ayeshafsaas-projects.vercel.app/
 
 ## Pages
 
