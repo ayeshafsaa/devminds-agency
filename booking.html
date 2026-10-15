@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Call | DevMinds.ai</title>
+  <meta name="description" content="Book a free 30-minute discovery call with DevMinds.ai. Pick a date and time that works for you.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try {
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <header class="navbar" id="site-header"></header>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Book a Call</div>
+        <h1>Book a <span class="gradient-text">free call</span></h1>
+        <p>Pick a date and time that works for you. We will talk through your idea and suggest the best next step.</p>
+      </div>
+    </section>
+
+    <!-- ===== BOOKING ===== -->
+    <section class="section" style="padding-top:30px;">
+      <div class="container">
+
+        <div class="booking" id="booking">
+
+          <!-- Left info panel -->
+          <aside class="bk-info">
+            <div class="bk-brand">
+              <img src="favicon.svg" alt="">
+              <span>DevMinds<em>.ai</em></span>
+            </div>
+
+            <h2>Free Discovery Call</h2>
+
+            <ul class="bk-meta">
+              <li><i class="fa-regular fa-clock"></i> 30 minutes</li>
+              <li><i class="fa-solid fa-video" id="bk-type-icon"></i> <span id="bk-type-text">Video call, link sent by email</span></li>
+              <li><i class="fa-solid fa-globe"></i> <span id="bk-tz">Your local time</span></li>
+            </ul>
+
+            <p class="bk-text">A relaxed chat about your goals, timeline and budget. No pressure and no sales pitch.</p>
+
+            <div class="bk-summary">
+              <h4>Your selection</h4>
+              <div><i class="fa-regular fa-calendar"></i> <span id="sum-date">No date selected</span></div>
+              <div><i class="fa-regular fa-clock"></i> <span id="sum-time">No time selected</span></div>
+            </div>
+          </aside>
+
+          <!-- Right side -->
+          <div class="bk-main">
+
+            <!-- STEP 1: date and time -->
+            <div class="bk-step" id="step-pick">
+              <h3>Select a date and time</h3>
+
+              <div class="pick-grid">
+
+                <div class="calendar">
+                  <div class="cal-head">
+                    <button type="button" id="cal-prev" aria-label="Previous month"><i class="fa-solid fa-chevron-left"></i></button>
+                    <strong id="cal-month"></strong>
+                    <button type="button" id="cal-next" aria-label="Next month"><i class="fa-solid fa-chevron-right"></i></button>
+                  </div>
+                  <div class="cal-week">
+                    <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                  </div>
+                  <div class="cal-days" id="cal-days"></div>
+                </div>
+
+                <div class="slots">
+                  <h4 id="slots-title">Available times</h4>
+                  <div class="slot-grid" id="slot-grid"></div>
+                </div>
+
+              </div>
+
+              <button type="button" class="btn btn-primary btn-block" id="bk-continue" disabled>
+                Continue <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <!-- STEP 2: details -->
+            <div class="bk-step" id="step-form" hidden>
+              <button type="button" class="bk-back" id="bk-back"><i class="fa-solid fa-arrow-left"></i> Back</button>
+              <h3>Enter your details</h3>
+              <p class="form-lead">Your call: <strong id="form-when"></strong></p>
+
+              <form id="booking-form" novalidate>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="bk-name">Full name <span class="req">*</span></label>
+                    <input type="text" id="bk-name" placeholder="Your name" autocomplete="name">
+                    <small class="err"></small>
+                  </div>
+                  <div class="field">
+                    <label for="bk-email">Email <span class="req">*</span></label>
+                    <input type="email" id="bk-email" placeholder="you@company.com" autocomplete="email">
+                    <small class="err"></small>
+                  </div>
+                </div>
+                <div class="field">
+                    <label>How should we talk? <span class="req">*</span></label>
+                    <div class="type-options">
+                      <label class="type-opt">
+                        <input type="radio" name="bk-type" value="video" checked>
+                        <span><i class="fa-solid fa-video"></i> Video call<small>Google Meet</small></span>
+                      </label>
+                      <label class="type-opt">
+                        <input type="radio" name="bk-type" value="phone">
+                        <span><i class="fa-solid fa-phone"></i> Phone call<small>Voice only</small></span>
+                      </label>
+                      <label class="type-opt">
+                        <input type="radio" name="bk-type" value="whatsapp">
+                        <span><i class="fa-brands fa-whatsapp"></i> WhatsApp<small>Voice or video</small></span>
+                      </label>
+                    </div>
+                  </div>
+  
+                  <div class="field" id="phone-field" hidden>
+                    <label for="bk-phone">Phone number <span class="req">*</span></label>
+                    <input type="tel" id="bk-phone" placeholder="e.g. +92 300 1234567" autocomplete="tel">
+                    <small class="err"></small>
+                  </div>
+
+                <div class="field">
+                  <label for="bk-topic">What do you want to discuss? <span class="req">*</span></label>
+                  <select id="bk-topic">
+                    <option value="">Select a topic</option>
+                    <option>Software Development</option>
+                    <option>AI Solutions and Automation</option>
+                    <option>AI Content Generation</option>
+                    <option>Digital Marketing</option>
+                    <option>Post Production</option>
+                    <option>Not sure yet</option>
+                  </select>
+                  <small class="err"></small>
+                </div>
+
+                <div class="field">
+                  <label for="bk-notes">Anything we should know? (optional)</label>
+                  <textarea id="bk-notes" placeholder="Share links, ideas or questions..."></textarea>
+                  <small class="err"></small>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="bk-submit">
+                  Confirm Booking <i class="fa-solid fa-check"></i>
+                </button>
+              </form>
+            </div>
+
+            <!-- STEP 3: confirmation -->
+            <div class="bk-step form-success" id="step-done" hidden>
+              <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+              <h3>You are booked, <span id="done-name"></span>!</h3>
+              <p>A confirmation would be sent to <strong id="done-email"></strong>.</p>
+
+              <div class="done-details">
+                <div><i class="fa-regular fa-calendar"></i> <span id="done-date"></span></div>
+                <div><i class="fa-regular fa-clock"></i> <span id="done-time"></span> (30 minutes)</div>
+                <div><i class="fa-solid fa-video" id="done-type-icon"></i> <span id="done-type"></span></div>
+              </div>
+
+              <a href="#" class="btn btn-primary" id="gcal-link" target="_blank" rel="noopener">
+                <i class="fa-regular fa-calendar-plus"></i> Add to Google Calendar
+              </a>
+              <button type="button" class="btn btn-outline" id="book-another">Book another call</button>
+              <p class="modal-note" style="margin-top:6px;">Concept project. No real booking is made.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="site-footer"></footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

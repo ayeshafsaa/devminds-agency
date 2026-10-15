@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | DevMinds.ai</title>
+  <meta name="description" content="Concept projects by DevMinds.ai across software, AI solutions, marketing and post production.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try {
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <header class="navbar" id="site-header"></header>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Portfolio</div>
+        <h1>Our <span class="gradient-text">Work</span></h1>
+        <p>Concept projects that show how we mix code, AI and creative. Click any project to see the case study.</p>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" style="padding-top:30px;">
+      <div class="container">
+
+        <div class="p-filters reveal">
+          <button class="p-btn active" data-filter="all">All</button>
+          <button class="p-btn" data-filter="software">Software</button>
+          <button class="p-btn" data-filter="ai">AI</button>
+          <button class="p-btn" data-filter="marketing">Marketing</button>
+          <button class="p-btn" data-filter="video">Video</button>
+        </div>
+
+        <div class="p-grid">
+
+          <article class="project-item reveal" data-category="software" data-id="shopsphere" tabindex="0">
+            <div class="p-thumb pt1"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="p-body">
+              <span class="tag">Software</span>
+              <h3>ShopSphere</h3>
+              <p>A fast e-commerce platform with a smooth checkout.</p>
+              <span class="p-more">View case study <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <article class="project-item reveal" data-category="ai" data-id="chatpilot" tabindex="0">
+            <div class="p-thumb pt2"><i class="fa-solid fa-comments"></i></div>
+            <div class="p-body">
+              <span class="tag">AI Solutions</span>
+              <h3>ChatPilot</h3>
+              <p>An AI support assistant that answers customers 24/7.</p>
+              <span class="p-more">View case study <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <article class="project-item reveal" data-category="video" data-id="reelcraft" tabindex="0">
+            <div class="p-thumb pt3"><i class="fa-solid fa-clapperboard"></i></div>
+            <div class="p-body">
+              <span class="tag">Post Production</span>
+              <h3>ReelCraft</h3>
+              <p>A short-form video series with motion graphics.</p>
+              <span class="p-more">View case study <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <article class="project-item reveal" data-category="marketing" data-id="growthlens" tabindex="0">
+            <div class="p-thumb pt4"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="p-body">
+              <span class="tag">Marketing</span>
+              <h3>GrowthLens</h3>
+              <p>SEO strategy and a live analytics dashboard.</p>
+              <span class="p-more">View case study <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <article class="project-item reveal" data-category="ai" data-id="storyforge" tabindex="0">
+            <div class="p-thumb pt5"><i class="fa-solid fa-feather-pointed"></i></div>
+            <div class="p-body">
+              <span class="tag">AI Content</span>
+              <h3>StoryForge</h3>
+              <p>An AI-assisted writing engine with a consistent brand voice.</p>
+              <span class="p-more">View case study <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <article class="project-item reveal" data-category="software" data-id="fittrack" tabindex="0">
+            <div class="p-thumb pt6"><i class="fa-solid fa-dumbbell"></i></div>
+            <div class="p-body">
+              <span class="tag">Software</span>
+              <h3>FitTrack</h3>
+              <p>A mobile fitness app with workout plans and progress charts.</p>
+              <span class="p-more">View case study <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="cta-box reveal">
+          <h2>Have a project in mind?</h2>
+          <p>Let us turn your idea into the next case study.</p>
+          <a href="booking.html" class="btn btn-light">Book a Free Call <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== PROJECT MODAL ===== -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-thumb" id="modal-thumb"></div>
+      <div class="modal-body">
+        <span class="tag" id="modal-tag"></span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc"></p>
+        <h4>Tech stack</h4>
+        <div class="modal-tech" id="modal-tech"></div>
+        <div class="results" id="modal-results"></div>
+        <p class="modal-note">Concept project. Results shown are illustrative.</p>
+        <a href="booking.html" class="btn btn-primary">Start a similar project</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" id="site-footer"></footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | DevMinds.ai</title>
+  <meta name="description" content="Software development, AI solutions, AI content generation, digital marketing and post production services by DevMinds.ai.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try {
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <header class="navbar" id="site-header"></header>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Services</div>
+        <h1>Our <span class="gradient-text">Services</span></h1>
+        <p>Pick a service to see what we do, what you get and how long it takes.</p>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES TABS ===== -->
+    <section class="section" style="padding-top:30px;">
+      <div class="container svc-layout">
+
+        <!-- Tabs list -->
+        <div class="svc-tabs" role="tablist" aria-label="Services">
+
+          <button class="svc-tab active" role="tab" id="tab-software" data-target="software" aria-selected="true" aria-controls="panel-software">
+            <span class="svc-ico sv1"><i class="fa-solid fa-code"></i></span>
+            <span class="svc-txt"><strong>Software Development</strong><small>Web, mobile and SaaS</small></span>
+            <i class="fa-solid fa-chevron-right svc-arrow"></i>
+          </button>
+
+          <button class="svc-tab" role="tab" id="tab-ai" data-target="ai" aria-selected="false" aria-controls="panel-ai">
+            <span class="svc-ico sv2"><i class="fa-solid fa-robot"></i></span>
+            <span class="svc-txt"><strong>AI Solutions</strong><small>Chatbots and automation</small></span>
+            <i class="fa-solid fa-chevron-right svc-arrow"></i>
+          </button>
+
+          <button class="svc-tab" role="tab" id="tab-content" data-target="content" aria-selected="false" aria-controls="panel-content">
+            <span class="svc-ico sv3"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <span class="svc-txt"><strong>AI Content</strong><small>Copy, captions and visuals</small></span>
+            <i class="fa-solid fa-chevron-right svc-arrow"></i>
+          </button>
+
+          <button class="svc-tab" role="tab" id="tab-marketing" data-target="marketing" aria-selected="false" aria-controls="panel-marketing">
+            <span class="svc-ico sv4"><i class="fa-solid fa-bullhorn"></i></span>
+            <span class="svc-txt"><strong>Digital Marketing</strong><small>SEO, social and ads</small></span>
+            <i class="fa-solid fa-chevron-right svc-arrow"></i>
+          </button>
+
+          <button class="svc-tab" role="tab" id="tab-video" data-target="video" aria-selected="false" aria-controls="panel-video">
+            <span class="svc-ico sv5"><i class="fa-solid fa-film"></i></span>
+            <span class="svc-txt"><strong>Post Production</strong><small>Video and motion graphics</small></span>
+            <i class="fa-solid fa-chevron-right svc-arrow"></i>
+          </button>
+
+        </div>
+
+        <!-- Panels -->
+        <div class="svc-panels">
+
+          <!-- 1: Software -->
+          <article class="svc-panel active" role="tabpanel" id="panel-software" aria-labelledby="tab-software">
+            <div class="svc-banner sv1"><i class="fa-solid fa-code"></i><span>01</span></div>
+            <div class="svc-content">
+              <h2>Software Development</h2>
+              <p class="svc-lead">We design and build web apps, mobile apps and SaaS products that are fast, secure and ready to grow with you.</p>
+
+              <div class="svc-cols">
+                <div>
+                  <h4>What you get</h4>
+                  <ul class="feature-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Custom websites and web applications</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Mobile apps for Android and iOS</li>
+                    <li><i class="fa-solid fa-circle-check"></i> SaaS platforms with dashboards and billing</li>
+                    <li><i class="fa-solid fa-circle-check"></i> APIs, databases and integrations</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Admin panels with role-based access</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Deliverables</h4>
+                  <div class="modal-tech">
+                    <span>Source code</span><span>Design files</span><span>Documentation</span><span>Deployment</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="svc-meta">
+                <div><span>Typical timeline</span><strong>2 to 12 weeks</strong></div>
+                <div><span>Best for</span><strong>Startups and growing businesses</strong></div>
+              </div>
+
+              <div class="svc-actions">
+                <a href="booking.html" class="btn btn-primary">Book a Free Call</a>
+                <a href="contact.html" class="btn btn-outline">Ask a question</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2: AI -->
+          <article class="svc-panel" role="tabpanel" id="panel-ai" aria-labelledby="tab-ai">
+            <div class="svc-banner sv2"><i class="fa-solid fa-robot"></i><span>02</span></div>
+            <div class="svc-content">
+              <h2>AI Solutions and Automation</h2>
+              <p class="svc-lead">We put AI to work on the tasks that eat your team's time, from customer chats to repetitive internal workflows.</p>
+
+              <div class="svc-cols">
+                <div>
+                  <h4>What you get</h4>
+                  <ul class="feature-list">
+                    <li><i class="fa-solid fa-circle-check"></i> AI chatbots and virtual assistants</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Workflow and process automation</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Document and data processing</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Custom AI tools for your business</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Links with WhatsApp, email and CRMs</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Deliverables</h4>
+                  <div class="modal-tech">
+                    <span>Working prototype</span><span>Training data setup</span><span>Usage dashboard</span><span>Team handover</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="svc-meta">
+                <div><span>Typical timeline</span><strong>2 to 6 weeks</strong></div>
+                <div><span>Best for</span><strong>Teams buried in repetitive work</strong></div>
+              </div>
+
+              <div class="svc-actions">
+                <a href="booking.html" class="btn btn-primary">Book a Free Call</a>
+                <a href="contact.html" class="btn btn-outline">Ask a question</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3: AI Content -->
+          <article class="svc-panel" role="tabpanel" id="panel-content" aria-labelledby="tab-content">
+            <div class="svc-banner sv3"><i class="fa-solid fa-wand-magic-sparkles"></i><span>03</span></div>
+            <div class="svc-content">
+              <h2>AI Content Generation</h2>
+              <p class="svc-lead">Get high-quality content at speed. We use AI as a starting point and our editors make sure it sounds like you.</p>
+
+              <div class="svc-cols">
+                <div>
+                  <h4>What you get</h4>
+                  <ul class="feature-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Blog posts and website copy</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Social media captions and calendars</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Product descriptions at scale</li>
+                    <li><i class="fa-solid fa-circle-check"></i> AI-assisted images and visuals</li>
+                    <li><i class="fa-solid fa-circle-check"></i> A brand voice guide for your team</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Deliverables</h4>
+                  <div class="modal-tech">
+                    <span>Content calendar</span><span>Edited drafts</span><span>Brand voice guide</span><span>Image sets</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="svc-meta">
+                <div><span>Typical timeline</span><strong>First batch in 1 week</strong></div>
+                <div><span>Best for</span><strong>Brands that need more content, faster</strong></div>
+              </div>
+
+              <div class="svc-actions">
+                <a href="booking.html" class="btn btn-primary">Book a Free Call</a>
+                <a href="contact.html" class="btn btn-outline">Ask a question</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4: Marketing -->
+          <article class="svc-panel" role="tabpanel" id="panel-marketing" aria-labelledby="tab-marketing">
+            <div class="svc-banner sv4"><i class="fa-solid fa-bullhorn"></i><span>04</span></div>
+            <div class="svc-content">
+              <h2>Digital Marketing</h2>
+              <p class="svc-lead">We help the right people find you and give them a reason to stay, with strategies built around real numbers.</p>
+
+              <div class="svc-cols">
+                <div>
+                  <h4>What you get</h4>
+                  <ul class="feature-list">
+                    <li><i class="fa-solid fa-circle-check"></i> SEO and website optimization</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Social media management</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Paid ad campaigns</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Email marketing campaigns</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Analytics and monthly reports</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Deliverables</h4>
+                  <div class="modal-tech">
+                    <span>Strategy document</span><span>Campaign assets</span><span>Monthly report</span><span>Live dashboard</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="svc-meta">
+                <div><span>Typical timeline</span><strong>About 3 months to see results</strong></div>
+                <div><span>Best for</span><strong>Businesses that want steady growth</strong></div>
+              </div>
+
+              <div class="svc-actions">
+                <a href="booking.html" class="btn btn-primary">Book a Free Call</a>
+                <a href="contact.html" class="btn btn-outline">Ask a question</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5: Post Production -->
+          <article class="svc-panel" role="tabpanel" id="panel-video" aria-labelledby="tab-video">
+            <div class="svc-banner sv5"><i class="fa-solid fa-film"></i><span>05</span></div>
+            <div class="svc-content">
+              <h2>Post Production</h2>
+              <p class="svc-lead">From raw footage to a polished final cut. We make videos that look professional and hold attention.</p>
+
+              <div class="svc-cols">
+                <div>
+                  <h4>What you get</h4>
+                  <ul class="feature-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Video editing and color grading</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Motion graphics and animation</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Reels and short-form content</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Sound design and subtitles</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Thumbnails and cover art</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Deliverables</h4>
+                  <div class="modal-tech">
+                    <span>Final cuts</span><span>Vertical and wide formats</span><span>Subtitle files</span><span>Project files</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="svc-meta">
+                <div><span>Typical timeline</span><strong>3 to 7 days per video</strong></div>
+                <div><span>Best for</span><strong>Creators and brands posting weekly</strong></div>
+              </div>
+
+              <div class="svc-actions">
+                <a href="booking.html" class="btn btn-primary">Book a Free Call</a>
+                <a href="contact.html" class="btn btn-outline">Ask a question</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TOOLS ===== -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our Toolkit</span>
+          <h2>Technologies we <span class="gradient-text">work with</span></h2>
+        </div>
+
+        <div class="chips reveal">
+          <span class="chip">HTML and CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Next.js</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">PHP and MySQL</span>
+          <span class="chip">Tailwind CSS</span>
+          <span class="chip">Python</span>
+          <span class="chip">OpenAI and Claude APIs</span>
+          <span class="chip">Figma</span>
+          <span class="chip">Premiere Pro</span>
+          <span class="chip">After Effects</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-box reveal">
+          <h2>Not sure which service you need?</h2>
+          <p>Book a free call and we will point you in the right direction.</p>
+          <a href="booking.html" class="btn btn-light">Book a Free Call <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="site-footer"></footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | DevMinds.ai</title>
+  <meta name="description" content="Get in touch with DevMinds.ai. Tell us about your project and we will reply within one business day.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try {
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <header class="navbar" id="site-header"></header>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+        <h1>Let us talk about your <span class="gradient-text">project</span></h1>
+        <p>Tell us what you are building. We reply within one business day.</p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" style="padding-top:30px;">
+      <div class="container contact-grid">
+
+        <div class="info-stack">
+          <div class="info-card reveal">
+            <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4>Email us</h4>
+              <a href="mailto:hello@devminds.ai">hello@devminds.ai</a>
+            </div>
+          </div>
+
+          <div class="info-card reveal">
+            <div class="icon-box"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h4>Working hours</h4>
+              <p>Monday to Friday, 9am to 6pm</p>
+            </div>
+          </div>
+
+          <div class="info-card reveal">
+            <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
+            <div>
+              <h4>Where we work</h4>
+              <p>Remote-first, serving clients worldwide</p>
+            </div>
+          </div>
+
+          <div class="info-card reveal">
+            <div class="icon-box"><i class="fa-solid fa-calendar-check"></i></div>
+            <div>
+              <h4>Prefer a call?</h4>
+              <a href="booking.html">Schedule a free meeting</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card reveal">
+
+          <form id="contact-form" novalidate>
+            <h3>Send us a message</h3>
+            <p class="form-lead">Fields marked with <span class="req">*</span> are required.</p>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+                <small class="err"></small>
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email">
+                <small class="err"></small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="service">Service <span class="req">*</span></label>
+                <select id="service" name="service">
+                  <option value="">Select a service</option>
+                  <option>Software Development</option>
+                  <option>AI Solutions and Automation</option>
+                  <option>AI Content Generation</option>
+                  <option>Digital Marketing</option>
+                  <option>Post Production</option>
+                  <option>Not sure yet</option>
+                </select>
+                <small class="err"></small>
+              </div>
+              <div class="field">
+                <label for="budget">Budget (optional)</label>
+                <select id="budget" name="budget">
+                  <option value="">Select a range</option>
+                  <option>Under $1,000</option>
+                  <option>$1,000 to $5,000</option>
+                  <option>$5,000 to $15,000</option>
+                  <option>$15,000+</option>
+                </select>
+                <small class="err"></small>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Project details <span class="req">*</span></label>
+              <textarea id="message" name="message" placeholder="Tell us about your idea, goals and timeline..."></textarea>
+              <small class="err"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <div class="form-success" id="form-success" hidden>
+            <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+            <h3>Thank you, <span id="success-name"></span>!</h3>
+            <p>Your message is in. We will get back to you within one business day.</p>
+            <button type="button" class="btn btn-outline" id="send-another">Send another message</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions we <span class="gradient-text">get asked</span></h2>
+        </div>
+
+        <div class="faq">
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">How long does a typical project take? <i class="fa-solid fa-plus"></i></button>
+            <div class="faq-a"><p>A landing page or small website usually takes 1 to 2 weeks. Larger web apps and mobile apps take 6 to 12 weeks depending on the scope. We give you a clear timeline after the first call.</p></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">How much does it cost? <i class="fa-solid fa-plus"></i></button>
+            <div class="faq-a"><p>It depends on what you need. After a short discovery call we send a fixed quote, so there are no surprise charges along the way.</p></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">Do you work with clients in other countries? <i class="fa-solid fa-plus"></i></button>
+            <div class="faq-a"><p>Yes. We are remote-first and work with clients across time zones, with calls and updates scheduled at times that suit you.</p></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">Do you offer support after launch? <i class="fa-solid fa-plus"></i></button>
+            <div class="faq-a"><p>Yes. Every project includes a support window after launch, and we offer monthly maintenance plans if you want us to keep looking after it.</p></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">Do you use AI to build projects? <i class="fa-solid fa-plus"></i></button>
+            <div class="faq-a"><p>We use AI tools to speed up routine work, but every line of code and every piece of content is reviewed by a person. You get the speed of AI with human quality control.</p></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="site-footer"></footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
